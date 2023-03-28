@@ -2,7 +2,7 @@
   "name": "vue-portfolio00",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "DabinKim <81741760+allBingo@users.noreply.github.com>",
+  "author": "DabinKim <81741760+allBingo@user.noreply.github.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,8 +13,18 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.9",
+    "axios": "^1.3.4",
+    "express": "^4.18.2",
+    "firebase": "^8.10.0",
+    "firebase-admin": "^11.5.0",
+    "graphql-tag": "^2.12.6",
+    "js-cookie": "^3.0.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-apollo": "^3.1.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
