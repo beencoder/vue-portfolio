@@ -18,7 +18,7 @@
           <router-link :to="{name: 'SignUp', params: {id: 'kimdabeen'}}">sign up</router-link>
         </li>
         <li v-else>
-          <router-link to="/edit">edit profile</router-link>
+          <router-link to="/edit">edit info</router-link>
         </li>
         <li v-if="!isLoggedIn">
            <router-link to="/login">login</router-link>
@@ -169,14 +169,15 @@ export default {
   display: block;
   width: fit-content;
   margin-right: 2rem;
-  margin-bottom: 1.5rem;
-  font-size: 14rem;
+  margin-bottom: 3rem;
+  font-size: 14.5rem;
   color: #1d1a1b;
+  letter-spacing: -0.2rem;
   font-family: 'Trirong-Regular', serif;
   font-style: italic;
   text-transform: uppercase;
   transform: translate3d(0, 140%, 0) rotateZ(7deg);
-  transition: transform 1.5s cubic-bezier(.99, .03, .66, .83);
+  transition: transform 1.5s .1s cubic-bezier(.99, .03, .66, .83);
 }
 .main-wrap .nav .menu li:last-of-type > * {
   margin-bottom: 0;
@@ -228,14 +229,47 @@ export default {
   border-left: 1px solid #d2ad75;
 }
 
-@media screen and (max-width: 1200px) {
+/* 반응형 */
+@media screen and (max-width: 1024px) {
+  .main-wrap .nav .menu {
+    margin-left: 5.5rem;
+  }
+  .main-wrap .nav .menu li > *  {
+    font-size: 12rem;
+  }
   .main-wrap .side__left, .side__right {
-    width: 7rem;
+    width: 5rem;
   }
 }
-@media screen and (max-width: 860px) {
+
+@media screen and (max-width: 768px) {
+  .main-wrap .nav .menu {
+    margin-left: 4.5rem;
+  }
+  .main-wrap .nav .menu li > *  {
+    font-size: 8rem;
+  }
   .main-wrap .side__left, .side__right {
     width: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-wrap .header .member {
+    font-size: 1.2rem;
+  }
+  .main-wrap .header .menu-btn {
+    width: 3rem;
+    height: 2rem;
+  }
+  .main-wrap .nav .menu {
+    margin-left: 3rem;
+  }
+  .main-wrap .nav .menu li > *  {
+    font-size: 5rem;
+  }
+  .main-wrap .side__left, .side__right {
+    display: none;
   }
 }
 </style>

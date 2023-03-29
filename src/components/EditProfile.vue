@@ -2,11 +2,11 @@
   <div>
     <FixedLayout />
     <div class="edit-wrap">
-      <h3 class="page__title">edit profile</h3>
+      <h3 class="page__title">edit info</h3>
       <form novalidate>
         <div class="inner">
           <label for="nickName">닉네임</label>
-          <input type="text" id="nickName" :value="newNickName" @input="e => (newNickName = e.target.value)" placeholder="닉네임을 입력해주세요.">
+          <input type="text" id="nickName" :value="newNickName" @input="e => (newNickName = e.target.value)" placeholder="닉네임을 입력해주세요. (2~9자)" maxlength="9">
           <span v-show="warningMessage" class="message">닉네임은 최소 2자리 이상이어야 합니다.</span>
         </div>
         <div class="inner">
@@ -59,7 +59,6 @@ export default {
     findUser() {
       const user = firebase.auth().currentUser;
       if (user !== null) {
-        // The user object has basic properties such as display name, email, etc.
         this.newNickName = user.displayName;
         this.email = user.email;
       }
@@ -125,5 +124,24 @@ export default {
 .edit-wrap .submit-btn.disable {
   color: #a1a1a1;
   background-color: #d4d4d4;
+}
+
+/* 반응형 */
+@media screen and (max-width: 480px) {
+  .edit-wrap {
+    margin: 0 12%;
+  }
+  .edit-wrap .page__title {
+    font-size: 3.5rem;
+  }
+  .edit-wrap .inner {
+    margin-bottom: 1.5rem;
+  }
+  .edit-wrap .inner label, .edit-wrap .submit-btn {
+    font-size: 1.3rem;
+  }
+  .edit-wrap .inner input {
+    font-size: 1.2rem;
+  }
 }
 </style>

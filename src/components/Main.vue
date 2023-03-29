@@ -24,7 +24,7 @@
       </div>
       <div class="container">
         <router-link  v-if="!isLoggedIn" class="round-box btn" to="/signUp">Sign Up</router-link>
-        <router-link v-else @click="logout" class="round-box btn" to="/edit">Edit Profile</router-link>
+        <router-link v-else @click="logout" class="round-box btn" to="/edit">Edit Info</router-link>
         <div class="title-inner">
           <h2 class="title">front-end</h2>
         </div>
@@ -132,7 +132,7 @@ section {
   border-bottom: 1px solid #d2ad75;
 }
 .main {
-  margin-top: 3rem;
+  padding-top: 6rem;
 }
 .main .container {
   display: flex;
@@ -146,6 +146,7 @@ section {
 .main .container .title-inner .title {
   font-size: 14rem;
   line-height: 1;
+  letter-spacing: -0.2rem;
   font-family: 'Trirong-Regular', serif;
   text-transform: uppercase;
   text-align: center;
@@ -171,7 +172,7 @@ section {
   overflow: hidden;
   opacity: 0;
   z-index: 5;
-  transition: transform .4s, color .2s;
+  transition: transform .3s, color .2s;
 }
 .main .container:nth-of-type(1) .round-box {
   left: -4%;
@@ -245,7 +246,7 @@ section {
   --content-size: fit-content;
 }
 
-/* media */
+/* 반응형 */
 @media screen and (max-width: 1200px) {
   .main .container .title-inner .title {
     font-size: 12rem;
@@ -260,18 +261,18 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
-  section.main {
+  section {
     height: 90vh;
   }
   .main .container .title-inner .title {
-    font-size: 10rem;
+    font-size: 9rem;
   }
   .main .container:first-of-type .title-inner .title {
-    font-size: 9.5rem;
+    font-size: 8.5rem;
   }
   .main .container .round-box, .main .container:not(:first-of-type) .round-box::before {
-    width: 11rem;
-    height: 11rem;
+    width: 10rem;
+    height: 10rem;
   }
   .main .container .round-box .eye-inner .eye {
     width: 1.1rem;
@@ -279,56 +280,34 @@ section {
     margin: 0 1.1rem;
   }
   .main .container .round-box.btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
-@media screen and (max-width: 860px) {
-  section.main {
+@media screen and (max-width: 768px) {
+  section {
     height: 80vh;
   }
   .main .container .title-inner .title, .main .container:first-of-type .title-inner .title {
-    font-size: 8.5rem;
+    font-size: 6.8rem;
     line-height: 1.1;
   }
-  .main .container .round-box, .main .container:not(:first-of-type) .round-box::before {
-    width: 9rem;
-    height: 9rem;
-  }
-  .main .container:first-of-type .round-box {
+  .main .container .round-box {
     display: none;
   }
-  .main .container .round-box.btn {
-    font-size: 1.2rem;
-  }
-  .main .container:nth-of-type(3) .round-box {
-    right: -6%;
-  }
-  .main .container:nth-of-type(4) .round-box {
-    left: -6%;
-  }
 }
 
-@media screen and (max-width: 680px) {
-  section.main {
-    height: 80vh;
+@media screen and (max-width: 540px) {
+  .main .container .title-inner .title, .main .container:first-of-type .title-inner .title {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  section {
+    height: 75vh;
   }
   .main .container .title-inner .title, .main .container:first-of-type .title-inner .title {
-    font-size: 7rem;
-  }
-  .main .container .round-box, .main .container:not(:first-of-type) .round-box::before {
-    width: 9rem;
-    height: 9rem;
-  }
-  .main .container .round-box.btn {
-    font-size: 1.2rem;
-  }
-  .main .container:nth-of-type(3) .round-box {
-    right: -6%;
-  }
-  .main .container:nth-of-type(4) .round-box {
-    left: -6%;
+    font-size: 4.5rem;
   }
 }
-
 </style>

@@ -6,7 +6,7 @@
       <form novalidate>
         <div class="inner">
           <label for="nickName">닉네임</label>
-          <input type="text" id="nickName" :value="nickName" @input="e => (nickName = e.target.value)" placeholder="닉네임을 입력해주세요.">
+          <input type="text" id="nickName" :value="nickName" @input="e => (nickName = e.target.value)" placeholder="닉네임을 입력해주세요. (2~9자)" maxlength="8">
           <span v-show="warningMessage1" class="message">닉네임은 최소 2자리 이상이어야 합니다.</span>
         </div>
         <div class="inner">
@@ -177,5 +177,24 @@ export default {
 .signUp-wrap .submit-btn.disable {
   color: #a1a1a1;
   background-color: #d4d4d4;
+}
+
+/* 반응형 */
+@media screen and (max-width: 480px) {
+  .signUp-wrap {
+    margin: 0 12%;
+  }
+  .signUp-wrap .page__title {
+    font-size: 3.5rem;
+  }
+  .signUp-wrap .inner {
+    margin-bottom: 1.5rem;
+  }
+  .signUp-wrap .inner label, .signUp-wrap .submit-btn {
+    font-size: 1.3rem;
+  }
+  .signUp-wrap .inner input {
+    font-size: 1.2rem;
+  }
 }
 </style>

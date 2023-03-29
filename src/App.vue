@@ -32,7 +32,11 @@ export default {
   color: #d2ad75;
   background-color: #1d1a1b;
   overflow-x: hidden;
+  -ms-overflow-style: none;
   font-family: 'NotoSansKR-Regular', sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {

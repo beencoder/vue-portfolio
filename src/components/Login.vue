@@ -237,4 +237,23 @@ export default {
   color: #a1a1a1;
   background-color: #d4d4d4;
 }
+
+/* 반응형 */
+@media screen and (max-width: 480px) {
+  .login-wrap {
+    margin: 0 12%;
+  }
+  .login-wrap .page__title {
+    font-size: 3.5rem;
+  }
+  .login-wrap .inner label, .login-wrap .btn {
+    font-size: 1.3rem;
+  }
+  .login-wrap .inner input {
+    font-size: 1.2rem;
+  }
+  .login-wrap .inner:first-of-type input {
+    margin-bottom: 1.5rem;
+  }
+}
 </style>
