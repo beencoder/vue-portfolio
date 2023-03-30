@@ -6,19 +6,7 @@ import router from "./router";
 import firebase from "firebase/app";
 import store from "./vuex/index";
 
-// import axios from "axios";
-// import VueApollo from "vue-apollo";
-
-// Vue.prototype.$http = axios;
-// Vue.prototype.$store = store;
-
 Vue.config.productionTip = false;
-
-// Vue.use(VueApollo);
-
-// const apolloProvider = new VueApollo({
-//     defaultClient: apolloClient
-// });
 
 const firebaseConfig = {
   apiKey: "AIzaSyAcgKVRK7v00jclp87pDpnXBJPVNmafkLw",
