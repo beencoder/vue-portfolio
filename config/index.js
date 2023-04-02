@@ -50,9 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
-    publicPath: process.env.NODE_ENV === "production" ? "/vue-project/" : "",
+    assetsPublicPath: process.env.NODE_ENV === 'production' ? '/vue-project/' : '/',
 
     /**
      * Source Maps
@@ -75,6 +73,4 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   },
-
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-project/" : ""
 }
