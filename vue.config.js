@@ -1,7 +1,7 @@
 
 module.exports = {
-    outputDir: "./docs",
-    publicPath: "https://dakong8.github.io/vue-project/",
+    outputDir: "docs",
+    publicPath: "/vue-project/",
     chainWebpack: config => {
         config.module.rules.delete("eslint");
     }
