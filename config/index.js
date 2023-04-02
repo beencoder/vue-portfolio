@@ -52,7 +52,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
-    publicPath: process.env.NODE_ENV === "production" ? "vue-project/" : "",
+    publicPath: process.env.NODE_ENV === "production" ? "/vue-project/" : "",
 
     /**
      * Source Maps
@@ -76,5 +76,5 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
 
-  publicPath: process.env.NODE_ENV === "production" ? "vue-project/" : ""
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-project/" : ""
 }
