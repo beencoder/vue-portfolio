@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: process.env.NODE_ENV === 'production' ? '/vue-project/' : '/',
+    assetsPublicPath: process.env.NODE_ENV === 'production' ? './' : '/',
 
     /**
      * Source Maps
